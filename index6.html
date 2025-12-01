@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos del Restaurante</title>
+    <link rel="stylesheet" href="log.css">
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Pedidos</h1>
+            <button onclick="window.location.href='index7.html'">Ver Cuentas</button>
+        </div>
+    </section>
+
+    <section class="pedidos-list">
+        <ol id="lista-pedidos">
+           
+        </ol>
+    </section>
+
+    <script>
+        
+        let pedidos = JSON.parse(localStorage.getItem("pedidos")) || [];
+        const lista = document.getElementById("lista-pedidos");
+
+        function mostrarPedidos() {
+            lista.innerHTML = ""; 
+            if (pedidos.length === 0) {
+                lista.innerHTML = "<p>No hay pedidos aún.</p>";
+            } else {
+                pedidos.forEach((pedido, index) => {
+                    const li = document.createElement("li");
+                    li.className = "card";
+                    li.innerHTML = `
+                        <h3>${pedido.nombre}</h3>
+                        <p><strong>Precio:</strong> $${pedido.precio}</p>
+                        <p><strong>Comentario:</strong> ${pedido.extra || "—"}</p>
+                        <p><strong>Mesa:</strong> ${pedido.mesa || "—"}</p>
+                        <p><strong>Fecha:</strong> ${pedido.fecha}</p>
+                        <button onclick="eliminarPedido(${index})">Eliminar pedido</button>
+                    `;
+                    lista.appendChild(li);
+                });
+            }
+        }
+
+        function eliminarPedido(index) {
+            if (confirm("¿Estás seguro que deseas eliminar este pedido?")) {
+                pedidos.splice(index, 1); 
+                localStorage.setItem("pedidos", JSON.stringify(pedidos)); 
+                mostrarPedidos(); 
+            }
+        }
+
+        mostrarPedidos();
+    </script>
+</body>
+</html>
