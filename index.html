@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú del Restaurante</title>
+    <link rel="stylesheet" href="log.css">
+</head>
+
+<body>
+        <section class="hero">
+        <div class="hero-content">
+            <h1>¡Bienvenido a Nuestro Restaurante!</h1>
+            <p>Disfruta de sabores únicos en un ambiente acogedor. Explora nuestro menú y reserva tu mesa.</p>
+        </div>
+    </section>
+    <section class="info-cards">
+        <div class="card">
+            <h3>Ubicación</h3>
+            <p>Centro de la ciudad, Calle Principal 123.</p>
+        </div>
+        <div class="card">
+            <h3>Horario</h3>
+            <p>Lunes a Domingo: 12:00 PM - 10:00 PM.</p>
+        </div>
+        <div class="card">
+            <h3>Contacto</h3>
+            <p>Tel: +52 55 1234 5678 | Email: info@restaurante.com</p>
+        </div>
+    </section>
+    <section class="menu-section">
+
+        <h1>Menú del Restaurante</h1>
+        <h2>Entradas</h2>
+        <ol>
+            <li class="card">
+                <h3>Guacamole</h3>
+                <img src="https://patijinich.com/es/wp-content/uploads/sites/3/2021/09/guacamole-salsa.jpg">
+                <p><strong>Precio:</strong> $60</p>
+                <p class="descripcion">Aguacate fresco con limón y cilantro.</p>
+
+                <button onclick="enviarPedido(this)">Pedir</button>
+                <button onclick="mostrarEditor(this)">Modificar</button>
+
+                <div class="editor" style="display:none;">
+                    <textarea rows="3" cols="40"></textarea>
+                </div>
+                <br>
+                <label>Mesa:</label>
+                <select class="mesa-select">
+                    <option>1</option><option>2</option><option>3</option>
+                    <option>4</option><option>5</option><option>6</option>
+                    <option>7</option><option>8</option><option>9</option>
+                    <option>10</option><option>11</option><option>12</option>
+                    <option>13</option><option>14</option><option>15</option>
+                </select>
+
+                <label>Cantidad:</label>
+                <select class="cantidad-select">
+                    <option>1</option><option>2</option><option>3</option>
+                    <option>4</option><option>5</option><option>6</option>
+                    <option>7</option><option>8</option><option>9</option><option>10</option>
+                </select>
+            </li>
+            <li class="card">
+                <h3>Nachos con Queso</h3>
+                <img src="https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=300&q=80">
+                <p><strong>Precio:</strong> $70</p>
+                <p class="descripcion">Totopos cubiertos con queso fundido.</p>
+
+                <button onclick="enviarPedido(this)">Pedir</button>
+                <button onclick="mostrarEditor(this)">Modificar</button>
+
+                <div class="editor" style="display:none;">
+                    <textarea rows="3" cols="40"></textarea>
+                </div>
+                <br>
+                <label>Mesa:</label>
+                <select class="mesa-select">
+                    <option>1</option><option>2</option><option>3</option>
+                    <option>4</option><option>5</option><option>6</option>
+                    <option>7</option><option>8</option><option>9</option>
+                    <option>10</option><option>11</option><option>12</option>
+                    <option>13</option><option>14</option><option>15</option>
+                </select>
+
+                <label>Cantidad:</label>
+                <select class="cantidad-select">
+                    <option>1</option><option>2</option><option>3</option>
+                    <option>4</option><option>5</option><option>6</option>
+                    <option>7</option><option>8</option><option>9</option><option>10</option>
+                </select>
+            </li>
+            <li class="card">
+                <h3>Sopa de Tortilla</h3>
+                <img src="https://mandolina.co/wp-content/uploads/2020/11/sopa-de-tortilla-destacada-1200x720.jpg">
+                <p><strong>Precio:</strong> $55</p>
+                <p class="descripcion">Caldo de jitomate con tiras de tortilla frita.</p>
+
+                <button onclick="enviarPedido(this)">Pedir</button>
+                <button onclick="mostrarEditor(this)">Modificar</button>
+
+                <div class="editor" style="display:none;">
+                    <textarea rows="3" cols="40"></textarea>
+                </div>
+                <br>
+                <label>Mesa:</label>
+                <select class="mesa-select">
+                    <option>1</option><option>2</option><option>3</option>
+                    <option>4</option><option>5</option><option>6</option>
+                    <option>7</option><option>8</option><option>9</option>
+                    <option>10</option><option>11</option><option>12</option>
+                    <option>13</option><option>14</option><option>15</option>
+                </select>
+
+                <label>Cantidad:</label>
+                <select class="cantidad-select">
+                    <option>1</option><option>2</option><option>3</option>
+                    <option>4</option><option>5</option><option>6</option>
+                    <option>7</option><option>8</option><option>9</option><option>10</option>
+                </select>
+            </li>
+
+        </ol>
+        <h2>Platos Fuertes</h2>
+        <ol>
+            <li class="card">
+                <h3>Tacos al Pastor</h3>
+                <img src="https://comedera.com/wp-content/uploads/sites/9/2017/08/tacos-al-pastor-receta.jpg">
+                <p><strong>Precio:</strong> $80</p>
+                <p class="descripcion">Carne adobada con piña en tortilla de maíz.</p>
+
+                <button onclick="enviarPedido(this)">Pedir</button>
+                <button onclick="mostrarEditor(this)">Modificar</button>
+
+                <div class="editor" style="display:none;">
+                    <textarea rows="3" cols="40"></textarea>
+                </div>
+                <br>
+                <label>Mesa:</label>
+                <select class="mesa-select">
+                    <option>1</option><option>2</option><option>3</option>
+                    <option>4</option><option>5</option><option>6</option>
+                    <option>7</option><option>8</option><option>9</option>
+                    <option>10</option><option>11</option><option>12</option>
+                    <option>13</option><option>14</option><option>15</option>
+                </select>
+
+                <label>Cantidad:</label>
+                <select class="cantidad-select">
+                    <option>1</option><option>2</option><option>3</option>
+                    <option>4</option><option>5</option><option>6</option>
+                    <option>7</option><option>8</option><option>9</option><option>10</option>
+                </select>
+            </li>
+            <li class="card">
+                <h3>Pizza Margarita</h3>
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=300&q=80">
+                <p><strong>Precio:</strong> $150</p>
+                <p class="descripcion">Clásica pizza de tomate, queso y albahaca.</p>
+
+                <button onclick="enviarPedido(this)">Pedir</button>
+                <button onclick="mostrarEditor(this)">Modificar</button>
+
+                <div class="editor" style="display:none;">
+                    <textarea rows="3" cols="40"></textarea>
+                </div>
+                <br>
+                <label>Mesa:</label>
+                <select class="mesa-select">
+                    <option>1</option><option>2</option><option>3</option>
+                    <option>4</option><option>5</option><option>6</option>
+                    <option>7</option><option>8</option><option>9</option>
+                    <option>10</option><option>11</option><option>12</option>
+                    <option>13</option><option>14</option><option>15</option>
+                </select>
+
+                <label>Cantidad:</label>
+                <select class="cantidad-select">
+                    <option>1</option><option>2</option><option>3</option>
+                    <option>4</option><option>5</option><option>6</option>
+                    <option>7</option><option>8</option><option>9</option><option>10</option>
+                </select>
+            </li>
+            <li class="card">
+                <h3>Hamburguesa Clásica</h3>
+                <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=300&q=80">
+                <p><strong>Precio:</strong> $120</p>
+                <p class="descripcion">Carne jugosa con lechuga, tomate y papas.</p>
+
+                <button onclick="enviarPedido(this)">Pedir</button>
+                <button onclick="mostrarEditor(this)">Modificar</button>
+
+                <div class="editor" style="display:none;">
+                    <textarea rows="3" cols="40"></textarea>
+                </div>
+                <br>
+                <label>Mesa:</label>
+                <select class="mesa-select">
+                    <option>1</option><option>2</option><option>3</option>
+                    <option>4</option><option>5</option><option>6</option>
+                    <option>7</option><option>8</option><option>9</option>
+                    <option>10</option><option>11</option><option>12</option>
+                    <option>13</option><option>14</option><option>15</option>
+                </select>
+
+                <label>Cantidad:</label>
+                <select class="cantidad-select">
+                    <option>1</option><option>2</option><option>3</option>
+                    <option>4</option><option>5</option><option>6</option>
+                    <option>7</option><option>8</option><option>9</option><option>10</option>
+                </select>
+            </li>
+
+        </ol>
+
+<h2>Postres</h2>
+<ol>
+    <li class="card">
+        <h3>Crepas de Nutella</h3>
+        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Crepas con Nutella y plátano">
+        <p><strong>Precio:</strong> $75</p>
+        <p class="descripcion">Deliciosas crepas con Nutella y plátano.</p>
+        
+        <button onclick="enviarPedido(this)">Pedir</button>
+        <button onclick="mostrarEditor(this)">Modificar</button>
+
+        <div class="editor" style="display:none;">
+            <textarea rows="3" cols="40"></textarea>
+        </div>
+        <br>
+        <label>Mesa:</label>
+        <select class="mesa-select">
+            <option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option>
+            <option value="5">5</option><option value="6">6</option>
+            <option value="7">7</option><option value="8">8</option>
+            <option value="9">9</option><option value="10">10</option>
+            <option value="11">11</option><option value="12">12</option>
+            <option value="13">13</option><option value="14">14</option>
+            <option value="15">15</option>
+        </select>
+
+        <label>Cantidad:</label>
+        <select class="cantidad-select">
+            <option>1</option><option>2</option><option>3</option>
+            <option>4</option><option>5</option><option>6</option>
+            <option>7</option><option>8</option><option>9</option><option>10</option>
+        </select>
+    </li>
+
+    <li class="card">
+        <h3>Helado de Vainilla</h3>
+        <img src="https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Helado cremoso de vainilla">
+        <p><strong>Precio:</strong> $50</p>
+        <p class="descripcion">Helado cremoso de vainilla artesanal.</p>
+
+        <button onclick="enviarPedido(this)">Pedir</button>
+        <button onclick="mostrarEditor(this)">Modificar</button>
+
+        <div class="editor" style="display:none;">
+            <textarea rows="3" cols="40"></textarea>
+        </div>
+        <br>
+        <label>Mesa:</label>
+        <select class="mesa-select">
+            <option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option>
+            <option value="5">5</option><option value="6">6</option>
+            <option value="7">7</option><option value="8">8</option>
+            <option value="9">9</option><option value="10">10</option>
+            <option value="11">11</option><option value="12">12</option>
+            <option value="13">13</option><option value="14">14</option>
+            <option value="15">15</option>
+        </select>
+
+        <label>Cantidad:</label>
+        <select class="cantidad-select">
+            <option>1</option><option>2</option><option>3</option>
+            <option>4</option><option>5</option><option>6</option>
+            <option>7</option><option>8</option><option>9</option><option>10</option>
+        </select>
+    </li>
+
+    <li class="card">
+        <h3>Pastel de Chocolate</h3>
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Pastel de chocolate húmedo con cobertura">
+        <p><strong>Precio:</strong> $90</p>
+        <p class="descripcion">Pastel húmedo de chocolate con cobertura.</p>
+
+        <button onclick="enviarPedido(this)">Pedir</button>
+        <button onclick="mostrarEditor(this)">Modificar</button>
+
+        <div class="editor" style="display:none;">
+            <textarea rows="3" cols="40"></textarea>
+        </div>
+        <br>
+        <label>Mesa:</label>
+        <select class="mesa-select">
+            <option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option>
+            <option value="5">5</option><option value="6">6</option>
+            <option value="7">7</option><option value="8">8</option>
+            <option value="9">9</option><option value="10">10</option>
+            <option value="11">11</option><option value="12">12</option>
+            <option value="13">13</option><option value="14">14</option>
+            <option value="15">15</option>
+        </select>
+
+        <label>Cantidad:</label>
+        <select class="cantidad-select">
+            <option>1</option><option>2</option><option>3</option>
+            <option>4</option><option>5</option><option>6</option>
+            <option>7</option><option>8</option><option>9</option><option>10</option>
+        </select>
+    </li>
+</ol>
+
+<h2>Bebidas</h2>
+<ol>
+
+    <li class="card">
+        <h3>Agua Natural</h3>
+        <img src="https://cuidateplus.marca.com/sites/default/files/styles/natural/public/2025-08/agua-fria.jpg.webp?itok=h8VcffDK" alt="Agua natural">
+        <p><strong>Precio:</strong> $20</p>
+        <p class="descripcion">Agua purificada refrescante.</p>
+
+        <button onclick="enviarPedido(this)">Pedir</button>
+        <button onclick="mostrarEditor(this)">Modificar</button>
+
+        <div class="editor" style="display:none;">
+            <textarea rows="3" cols="40"></textarea>
+        </div>
+        <br>
+        <label>Mesa:</label>
+        <select class="mesa-select">
+            <option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option>
+            <option value="5">5</option><option value="6">6</option>
+            <option value="7">7</option><option value="8">8</option>
+            <option value="9">9</option><option value="10">10</option>
+            <option value="11">11</option><option value="12">12</option>
+            <option value="13">13</option><option value="14">14</option>
+            <option value="15">15</option>
+        </select>
+
+        <label>Cantidad:</label>
+        <select class="cantidad-select">
+            <option>1</option><option>2</option><option>3</option>
+            <option>4</option><option>5</option><option>6</option>
+            <option>7</option><option>8</option><option>9</option><option>10</option>
+        </select>
+    </li>
+
+    <li class="card">
+        <h3>Refresco</h3>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC4QYih_n5v8hPHRIBoNNpqrg8zg9ucWO4OQ&s" alt="Refresco">
+        <p><strong>Precio:</strong> $25</p>
+        <p class="descripcion">Bebidas gaseosas variadas.</p>
+
+        <button onclick="enviarPedido(this)">Pedir</button>
+        <button onclick="mostrarEditor(this)">Modificar</button>
+
+        <div class="editor" style="display:none;">
+            <textarea rows="3" cols="40"></textarea>
+        </div>
+        <br>
+        <label>Mesa:</label>
+        <select class="mesa-select">
+            <option value="1">1</option><option value="2">2</option>
+            <option value="3">3</option><option value="4">4</option>
+            <option value="5">5</option><option value="6">6</option>
+            <option value="7">7</option><option value="8">8</option>
+            <option value="9">9</option><option value="10">10</option>
+            <option value="11">11</option><option value="12">12</option>
+            <option value="13">13</option><option value="14">14</option>
+            <option value="15">15</option>
+        </select>
+
+        <label>Cantidad:</label>
+        <select class="cantidad-select">
+            <option>1</option><option>2</option><option>3</option>
+            <option>4</option><option>5</option><option>6</option>
+            <option>7</option><option>8</option><option>9</option><option>10</option>
+        </select>
+    </li>
+
+</ol>
+
+    </section>
+    <div id="carrito">
+        <h3>🧾 Pedidos Realizados</h3>
+        <div id="lista-pedidos"></div>
+    </div>
+<script>
+
+function mostrarEditor(boton) {
+    const editor = boton.parentElement.querySelector(".editor");
+    if (editor.style.display === "none" || editor.style.display === "") {
+        editor.style.display = "block";
+        boton.textContent = "Ocultar";
+    } else {
+        editor.style.display = "none";
+        boton.textContent = "Modificar";
+    }
+}
+
+function enviarPedido(boton) {
+    const card = boton.parentElement;
+
+    const nombre = card.querySelector("h3").textContent;
+    const textoPrecio = card.querySelector("p").textContent;
+    const precio = textoPrecio.replace("Precio:", "").replace("$", "").trim();
+
+    const textarea = card.querySelector("textarea");
+    const comentario = textarea ? textarea.value : "";
+
+    const mesa = card.querySelector(".mesa-select").value;
+    const cantidad = parseInt(card.querySelector(".cantidad-select").value);
+
+    if (!mesa) {
+        alert("Por favor selecciona una mesa.");
+        return;
+    }
+
+    const pedido = {
+        id: Date.now(),
+        nombre,
+        precio: Number(precio),
+        cantidad,
+        extra: comentario,
+        mesa,
+        fecha: new Date().toLocaleString()
+    };
+
+    let pedidos = JSON.parse(localStorage.getItem("pedidos")) || [];
+    pedidos.push(pedido);
+    localStorage.setItem("pedidos", JSON.stringify(pedidos));
+
+    mostrarPedidos();
+    alert(`Pedido enviado ✓`);
+}
+
+function mostrarPedidos() {
+    const contenedor = document.getElementById("lista-pedidos");
+    contenedor.innerHTML = "";
+
+    let pedidos = JSON.parse(localStorage.getItem("pedidos")) || [];
+
+    pedidos.forEach(p => {
+        const div = document.createElement("div");
+        div.className = "pedido-item";
+
+        div.innerHTML = `
+            <strong>${p.nombre}</strong><br>
+            Cantidad: ${p.cantidad}<br>
+            Mesa: ${p.mesa}<br>
+            <small>${p.fecha}</small><br>
+            ${p.extra ? `<em>Nota: ${p.extra}</em><br>` : ""}
+            <button onclick="eliminarPedido(${p.id})">Eliminar</button>
+        `;
+
+        contenedor.appendChild(div);
+    });
+}
+
+function eliminarPedido(id) {
+    let pedidos = JSON.parse(localStorage.getItem("pedidos")) || [];
+    pedidos = pedidos.filter(p => p.id !== id);
+    localStorage.setItem("pedidos", JSON.stringify(pedidos));
+    mostrarPedidos();
+}
+
+mostrarPedidos();
+
+</script>
+
+</body>
+</html>
